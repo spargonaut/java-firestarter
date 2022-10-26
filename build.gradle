@@ -13,7 +13,6 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
-//sourceCompatibility = 1.8
 mainClassName = 'org.spargonaut.firestarter.Application'
 
 repositories {
@@ -21,8 +20,8 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.springframework.boot:spring-boot:1.3.5.RELEASE'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.springframework.boot:spring-boot:1.3.5.RELEASE'
 }
 
 shadowJar {
