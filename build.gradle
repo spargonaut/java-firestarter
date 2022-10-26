@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:5.1.0'
@@ -25,9 +25,9 @@ dependencies {
 }
 
 shadowJar {
-    baseName = 'firestarter'
+    archiveBaseName = 'firestarter'
     classifier = 'awesome'
-    version = '0.1'
+    archiveVersion = '0.1'
     manifest {
         attributes 'Description': 'The firestarter Application'
     }
