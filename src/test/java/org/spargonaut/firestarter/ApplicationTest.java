@@ -2,7 +2,7 @@ package org.spargonaut.firestarter;
 
 import org.junit.Rule;
 import org.junit.Test;
-import org.springframework.boot.test.OutputCapture;
+import org.springframework.boot.test.system.OutputCaptureRule;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -10,11 +10,11 @@ import static org.hamcrest.core.Is.is;
 public class ApplicationTest {
 
     @Rule
-    public OutputCapture capture = new OutputCapture();
+    public OutputCaptureRule captureRule = new OutputCaptureRule();
 
     @Test
     public void shouldPrintHelloWorldToStandardOut() {
         Application.main(null);
-        assertThat(capture.toString(), is("Hello World!\n"));
+        assertThat(captureRule.toString(), is("Hello World!\n"));
     }
 }
